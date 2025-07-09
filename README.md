@@ -1,2 +1,2 @@
 # Infinitely many counterexamples to a conjecture of Lovász
-This repository contains resources relating to the paper "Infinitely many counterexamples to a conjecture of Lovász" by Aida Abiad, Frederik Garbe, Xavier Povill, and Christoph Spiegel ([arXiv:2506.21286](https://arxiv.org/abs/2506.21286)).
+This repository contains resources relating to the paper "Infinitely many counterexamples to a conjecture of Lovász" by Aida Abiad, Frederik Garbe, Xavier Povill, and Christoph Spiegel ([arXiv:2506.21286](https://arxiv.org/abs/2506.21286)). You need a Python 3.9 environment with [sage](https://doc.sagemath.org/html/en/reference/index.html) 10.6. Running `python verify.py` checks the regularity, edge-colorability, and edge-removal-independence-set property. 
