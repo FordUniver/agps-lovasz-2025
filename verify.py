@@ -95,8 +95,11 @@ if __name__ == "__main__":
         for k in [0, 1, 2]:
             graph = get_generalized_petersen_graph(5*k + 11, 2)
             print(f"  Checking k={k} ", end="")
+            sys.stdout.flush()
             print(f"✅" if (min(graph.degree_sequence()) == max(graph.degree_sequence()) == 3) else f"❌", end=" ")
+            sys.stdout.flush()
             print(f"✅" if graph.line_graph().chromatic_number() == 3 else f"❌", end=" ")
+            sys.stdout.flush()
             print(f"✅" if check_for_conflicts(graph, 3, pool=pool) else f"❌")
 
         print("\nChecking r=3 counterexamples ...")
@@ -104,8 +107,11 @@ if __name__ == "__main__":
             for line in f:
                 graph = Graph(line.strip())
                 print(f"  Checking graph of order {graph.order()} ", end="")
+                sys.stdout.flush()
                 print(f"✅" if (min(graph.degree_sequence()) == max(graph.degree_sequence()) == 3) else f"❌", end=" ")
+                sys.stdout.flush()
                 print(f"✅" if graph.line_graph().chromatic_number() == 3 else f"❌", end=" ")
+                sys.stdout.flush()
                 print(f"✅" if check_for_conflicts(graph, 3, pool=pool) else f"❌")
 
         print("\nChecking r=4 counterexamples ")
@@ -113,7 +119,10 @@ if __name__ == "__main__":
             for line in f:
                 graph = Graph(line.strip())
                 print(f"  Checking graph of order {graph.order()} ", end="")
+                sys.stdout.flush()
                 print(f"✅" if (min(graph.degree_sequence()) == max(graph.degree_sequence()) == 4) else f"❌", end=" ")
+                sys.stdout.flush()
                 print(f"✅" if graph.line_graph().chromatic_number() == 4 else f"❌", end=" ")
+                sys.stdout.flush()
                 print(f"✅" if check_for_conflicts(graph, 4, pool=pool) else f"❌")
 
