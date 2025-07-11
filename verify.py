@@ -91,7 +91,7 @@ if __name__ == "__main__":
 
     with mp.Pool() as pool:
 
-        print("\nChecking the three base cases for Theorem 1 ...")
+        print("\nChecking the three base cases for Theorem 2 ...")
         for k in [0, 1, 2]:
             graph = get_generalized_petersen_graph(5*k + 11, 2)
             print(f"  Checking k={k} ", end="")
